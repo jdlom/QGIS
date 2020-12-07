@@ -96,7 +96,7 @@ class PostGISExecuteAndLoadSQL(QgisAlgorithm):
         connection_name = self.parameterAsConnectionName(parameters, self.DATABASE, context)
         id_field = self.parameterAsString(parameters, self.ID_FIELD, context)
         geom_field = self.parameterAsString(
-            parameters, self.GEOMETRY_FIELD, context)
+            parameters, self.GEOMETRY_FIELD, context) or None
 
         # resolve connection details to uri
         try:
